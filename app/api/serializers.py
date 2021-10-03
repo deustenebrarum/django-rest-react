@@ -7,8 +7,9 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ['id']
 
+user = UserSerializer()
+
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
-    user = UserSerializer()
     class Meta:
         model = models.Employee
         fields = ['id', 'status', 'role', 'salary_per_hour', 'hours_per_week', 'user']
@@ -16,19 +17,19 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
 class IncomeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Income
-        fields = ['id', 'amount', 'description', 'stamp', 'user.id']
+        fields = ['id', 'amount', 'description', 'stamp', 'user']
 
 class ExpenseSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Expense
-        fields = ['id', 'amount', 'description', 'stamp', 'user.id']
+        fields = ['id', 'amount', 'description', 'stamp', 'user']
 
 class MessageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Message
-        fields = ['id', 'text', 'stamp', 'user.id']
+        fields = ['id', 'text', 'stamp', 'user']
 
 class ClientsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Clients
-        fields = ['id', 'flow', 'stamp', 'user.id']
+        fields = ['id', 'flow', 'stamp', 'user']
