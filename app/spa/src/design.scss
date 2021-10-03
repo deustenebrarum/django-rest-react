@@ -1,0 +1,472 @@
+// --- COLORS ---
+$textColor: #000000;
+$darkColor: rgb(30,30,30);
+$midtoneColor: #d2cab0;
+$lightColor: #EAEDF2;
+$brightColor: rgb(254, 255, 179);
+
+$primaryColor: #FFC107;
+$secondaryColor: #fff;
+$tertiaryColor: #53C415;
+// add more colors as needed...
+$alertColor: #E9573F;
+
+$thinStroke: 1px;
+$thickStroke: 2px;
+
+// // --- MOBILE TYPE RAMP ---
+// // [MP] Paragraph
+// header, main, footer, .mp, .dp {
+//   font-size: 1rem;
+//   line-height: 1.5;
+//   font-weight: normal;
+//   font-family: 'Khula';
+// }
+// // [M1] Large
+// h1, .h1, .m1, .d1 {
+//   font-size: 2.375rem;
+//   line-height: 3rem;
+//   font-weight: 200;
+//   font-family: 'Khula';
+//   margin: 0;
+// }
+// // [M2] Reasonable Header
+// h2, .h2, .m2, .d2 {
+//   font-size: 1.75rem;
+//   line-height: 2.25rem;
+//   font-weight: 200;
+//   font-family: 'Khula';
+//   margin: 0;
+// }
+// // [M3] Standard Header
+// h3, .h3, .m3, .d3 {
+//   font-size: 1.3125rem;
+//   line-height: 1.75rem;
+//   font-weight: 200;
+//   font-family: 'Khula';
+//   margin: 0;
+// }
+// // [M4] Subheader for Subtext
+// h4, .h4, .m4, .d4 {
+//   font-size: 1rem;
+//   line-height: 1.5;
+//   font-weight: bold;
+//   font-family: 'Khula';
+//   margin: 0;
+// }
+// // [M5] Diminutive Details
+// h5, .h5, .m5, .d5 {
+//   font-size: 0.75rem;
+//   line-height: 1rem;
+//   font-weight: 200;
+//   font-family: 'Khula';
+//   margin: 0;
+// }
+
+
+// // --- DESKTOP TYPE RAMP ---
+// @media only screen and (min-width: 48rem) {
+//   // [DP] Paragraph
+//   header, main, footer, mp, .dp {
+//     font-size: 1rem;
+//     line-height: 1.5rem;
+//   }
+//   // [D1] Large
+//   h1, .h1, .m1, .d1 {
+//     font-size: 3.375rem;
+//     line-height: 4rem;
+//   }
+//   // [D2] Reasonable Header
+//   h2, .h2, .m2, .d2 {
+//     font-size: 2.25rem;
+//     line-height: 3rem;
+//   }
+//   // [D3] Standard Subheader
+//   h3, .h3, .m3, .d3 {
+//     font-size: 1.5rem;
+//     line-height: 2rem;
+//   }
+//   // [D4] Subheader for Subtext
+//   h4, .h4, .m4, .d4 {
+//     font-size: 1rem;
+//     line-height: 1.5;
+//   }
+//   // [D5] Diminutive Details
+//   h5, .h5, .m5, .d5 {
+//     font-size: 0.6875rem;
+//     line-height: 1rem;
+//   }
+// }
+
+// // --- ROUNDED CORNER OPTIONS ---
+// // (Squared is a given option, just
+// // add "squared" class to the button)
+// $radius1: .25rem;
+// $radius2: 100rem; // fully rounded
+
+// // --- SHADOWS ---
+// $dropShadow1: 0 2px 4px 0 rgba(0,0,0,0.08);
+// $dropShadow2: 0 3px 6px 0 rgba(0,0,0,0.16);
+// $dropShadow3: 0 8px 12px 0 rgba(0,0,0,0.16);
+// $dropShadow4: 0 16px 16px 0 rgba(0,0,0,0.16);
+
+
+
+// // ----- Personal preference -----
+// *, *:before, *:after {
+//   box-sizing: border-box;
+// }
+
+
+// // ----- Vertical Centering Styles -----
+// .table {
+//   display: table;
+//   width: 100%;
+// }
+// .table-cell {
+//   display: table-cell;
+//   vertical-align: middle;
+// }
+
+// body, html {
+//   // DO NOT CHANGE THIS PLS
+//   // This defines 1rem, if you want to
+//   // change the size of fonts please do
+//   // so in the variables above.
+//   font-size: 16px;
+//   color: $textColor;
+//   background: $brightColor;
+// }
+
+// // --- MIXINs ---
+
+// @mixin isItem {
+//   display: inline-block;
+//   text-align: center;
+//   box-sizing: border-box;
+// }
+// @mixin mediumItem {
+//   height: 3rem;
+//   line-height: 3rem;
+//   padding: 0 2rem;
+// }
+// @mixin textLight {
+//   color: $lightColor;
+//   -webkit-font-smoothing: antialiased;
+// }
+// @mixin textBright {
+//   color: $brightColor;
+//   -webkit-font-smoothing: antialiased;
+// }
+
+// // --- ELEMENTS ---
+
+// // --- BUTTONS ---
+// .button, button, input[type=submit], input[type="button"] {
+//   border: none;
+//   -webkit-appearance: none;
+//   text-decoration: inherit;
+//   background: $primaryColor;
+//   @include textBright;
+//   @include mediumItem;
+//   @include isItem;
+//   border-radius: $radius1;
+//   cursor: pointer;
+//   &::-moz-focus-inner {
+//     border: 0;
+//     padding: 0;
+//   }
+// }
+
+// // --- BASE STYLES ---
+// .radius1 {
+//   border-radius: $radius1;
+// }
+// .radius2, .rounded {
+//   border-radius: $radius2;
+// }
+// .squared {
+//   border-radius: 0;
+// }
+// .bgClear {
+//   background: transparent;
+// }
+// .bgTextColor {
+//   background: $textColor;
+// }
+// .bgDark {
+//   background: $darkColor;
+// }
+// .bgMidtone {
+//   background: $midtoneColor;
+// }
+// .bgLight {
+//   background: $lightColor;
+// }
+// .bgBright {
+//   background: $brightColor;
+// }
+// .bgPrimary {
+//   background: $primaryColor;
+// }
+// .bgSecondary {
+//   background: $secondaryColor;
+// }
+// .bgTertiary {
+//   background: $tertiaryColor;
+// }
+// .bgAlert {
+//   background: $alertColor;
+// }
+// .thinStroke {
+//   border: $thinStroke solid $primaryColor;
+// }
+// .thickStroke {
+//   border: $thickStroke solid $primaryColor;
+// }
+// .strokePrimary {
+//   border-color: $primaryColor;
+// }
+// .strokeSecondary {
+//   border-color: $secondaryColor;
+// }
+// .strokeTertiary {
+//   border-color: $tertiaryColor;
+// }
+// .strokeAlert {
+//   border-color: $alertColor;
+// }
+// .strokeTextColor {
+//   border-color: $textColor;
+// }
+// .strokeDark {
+//   border-color: $darkColor;
+// }
+// .strokeMidtone {
+//   border-color: $midtoneColor;
+// }
+// .strokeLight {
+//   border-color: $lightColor;
+// }
+// .strokeBright {
+//   border-color: $brightColor;
+// }
+// .textColor {
+//   color: $textColor;
+// }
+// .textDark {
+//   color: $darkColor;
+// }
+// .textMidtone {
+//   color: $midtoneColor;
+// }
+// .textLight {
+//   @include textLight;
+// }
+// .textBright {
+//   @include textBright
+// }
+// .textPrimary {
+//   color: $primaryColor;
+// }
+// .textSecondary {
+//   color: $secondaryColor;
+// }
+// .textTertiary {
+//   color: $tertiaryColor;
+// }
+// .textAlert {
+//   color: $alertColor;
+// }
+// .isItem {
+//   display: inline-block;
+//   text-align: center;
+// }
+// .tinyItem {
+//   height: 1.5rem;
+//   line-height: 1.5rem;
+//   padding: 0 0.75rem;
+// }
+// .smallItem {
+//   height: 2rem;
+//   line-height: 2rem;
+//   padding: 0 1rem;
+// }
+// .mediumItem {
+//   @include mediumItem;
+// }
+// .bigItem {
+//   height: 4rem;
+//   line-height: 4rem;
+// }
+// .isBlock {
+//     display: block;
+//     width: 100%;
+// }
+// .autoHeight {
+//     height: auto;
+//     padding-top: 0.5rem;
+//     padding-bottom: 0.5rem;
+// }
+// .shadow1 {
+//   box-shadow: $dropShadow1;
+// }
+// .shadow2 {
+//   box-shadow: $dropShadow2;
+// }
+// .shadow3 {
+//   box-shadow: $dropShadow3;
+// }
+// .shadow4 {
+//   box-shadow: $dropShadow4;
+// }
+
+// // Hide on mobile 
+// .noMobile {
+//   display: none;
+// }
+// .onlyMobile, .mobileOnly {
+//   display: block;
+// }
+// @media only screen and (min-width: 48rem) {
+//   .noMobile {
+//     display: block;
+//   }
+//   .onlyMobile, .mobileOnly {
+//     display: none;
+//   }
+// }
+
+
+
+// // GRID CUSTOMIZATION
+// .row {
+//   max-width: 66rem;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+
+
+
+
+
+
+
+
+
+// // Example Modular stuff
+// main {
+//   margin-top: 4rem;
+// }
+// header {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 4rem;
+//   box-sizing: border-box;
+//   padding: 0.75rem 1rem;
+//   line-height: 2.5rem;
+//   background: $brightColor;
+//   box-shadow: $dropShadow2;
+// }
+// header nav {
+//   display: block;
+//   text-align: right;
+// }
+// header nav a, header nav .button {
+//   height: 2.5rem;
+//   line-height: 2.5rem;
+//   margin-left: 3rem;
+// }
+// header nav a {
+//   font-weight: bold;
+//   text-decoration: none;
+//   color: $darkColor;
+// }
+
+// .landing-hero {
+//   background-image: linear-gradient(-45deg, #FFFFFF 7%, #EAEDF2 100%);
+//   padding: 3rem 1rem 2rem 1rem;
+// }
+// .landing-hero .card .message {
+//   margin: 2rem 1rem 0 1rem;
+//   line-height: calc(2rem - 4px);
+//   color: darken($tertiaryColor, 10%);
+// }
+// @media only screen and (min-width: 48rem) {
+//   .landing-hero {
+//     padding: 3rem 0 8rem 0;
+//   }
+//   .landing-hero h1 {
+//     margin-bottom: 2rem;
+//   }
+//   .landing-hero .card {
+//     overflow: hidden;
+//     margin-top: 3rem;
+//     box-shadow: $dropShadow4;
+//     background: $brightColor;
+//   }
+//   .landing-hero .card .card-title {
+//     padding: 0.25rem;
+//     text-align: center;
+//   }
+//   .landing-hero .card .card-content {
+//     padding: 2rem 4rem;
+//   }
+//   .landing-hero .card .card-content .button {
+//     margin-top: 2rem;
+//     box-shadow: $dropShadow2;
+//   }
+// }
+
+// section.noWorries {
+//   padding: 8rem 1rem;
+// }
+// section.noWorries h2 {
+//   margin-bottom: 2rem;
+// }
+// section.frameworks {
+//   padding: 8rem 1rem;
+// }
+// // FOOTER STYLES
+// footer {
+//   background: $textColor;
+//   color: $brightColor;
+//   -webkit-font-smoothing: antialiased;
+//   padding: 2rem 3rem;
+// }
+// footer .button {
+//   margin-bottom: 1rem;
+// }
+// footer a {
+//   text-decoration: inherit;
+//   color: inherit;
+//   display: block;
+//   margin-bottom: 0.5rem;
+// }
+// footer h3 {
+//   margin-top: 1.5rem;
+//   margin-bottom: 0.5rem;
+// }
+// footer h5 {
+//   text-align: center;
+//   margin-top: 1.5rem;
+// }
+// footer h5 a {
+//   opacity: 0.8;
+//   margin: 0;
+//   display: inline;
+// }
+// @media only screen and (min-width: 48rem) {
+//   footer {
+//     padding: 6rem 0 8rem 0;
+//   }
+//   footer h3 {
+//     margin-top: 0;
+//   }
+//   footer h5 {
+//     margin-top: 0;
+//   }
+// }
