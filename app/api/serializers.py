@@ -20,9 +20,10 @@ class IncomeSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['id', 'amount', 'description', 'stamp', 'user']
 
 class ExpenseSerializer(serializers.HyperlinkedModelSerializer):
+    owner = UserSerializer();
     class Meta:
         model = models.Expense
-        fields = ['id', 'amount', 'description', 'stamp', 'user']
+        fields = ['id', 'amount', 'description', 'stamp', 'owner', 'user']
 
 class MessageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

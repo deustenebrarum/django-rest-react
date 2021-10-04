@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import include, path
 from api import views as api_views
 from frontend import views as frontend_views
-from django.contrib.auth import views as auth_views
+from service import views as service_views
+from django.contrib.auth import login, logout, views as auth_views
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
@@ -32,7 +33,15 @@ router.register(r'users', api_views.UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', frontend_views.index, name='home'),
+    path('signup/', service_views.signup, name='signup'),
+    path('login/', service_views.login, name='login'),
+    path('logout/', service_views.logout, name='logout'),
+    path('about/', frontend_views.about, name='about'),
+    path('contacts/', frontend_views.contacts),
+    path('employees/', frontend_views.employees, name='employees'),
+    path('', frontend_views.landing, name='landing'),
+    path('sert/', frontend_views.sert),
+    # path('', frontend_views.index, name='home'),
     #api
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),

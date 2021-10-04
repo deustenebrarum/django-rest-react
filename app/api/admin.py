@@ -9,7 +9,7 @@ from django.utils.safestring import mark_safe
 @admin.action(description="Switch status")
 def switch_status(selfmodeladmin, request, queryset):
     for query in queryset:
-        query.update(status=not query.status)
+        query.status = not query.status
 
 class EmployeeResource(resources.ModelResource):
     class Meta:
@@ -19,7 +19,8 @@ class EmployeeAdmin(ImportExportModelAdmin):
     resource_class = EmployeeResource
     actions = [switch_status]
     list_filter = ['user']
-    list_display = ['id', 'get_user_name', 'status', 'role', 'salary_per_hour', 'hours_per_week']
+    search_fields = ['name']
+    list_display = ['id', 'name', 'get_user_name', 'status', 'role', 'salary_per_hour', 'hours_per_week']
     def get_user_name(self, obj):
         return mark_safe('<a href="{0}?id={2}">{1}</a>'
                 .format(reverse("admin:auth_user_changelist"),
@@ -75,10 +76,11 @@ class MessageResource(resources.ModelResource):
     class Meta:
         model = Message
 @admin.register(Message)
-class EmployeeAdmin(ImportExportModelAdmin):
+class MessageAdmin(ImportExportModelAdmin):
     resource_class = MessageResource
-    list_filter = ['user']
-    list_display = ['id', 'text', 'stamp', 'user']
+    list_filter = ['owner']
+    search_fields = ['text']
+    list_display = ['id', 'text', 'stamp', 'owner', 'user']
     def get_user_name(self, obj):
         return mark_safe('<a href="{0}?id={2}">{1}</a>'
                 .format(reverse("admin:auth_user_changelist"),

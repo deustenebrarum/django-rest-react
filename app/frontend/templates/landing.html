@@ -1,0 +1,38 @@
+    {% extends 'base.html' %} 
+    {% block title %}Инж проект{% endblock %}
+    {% block main %}
+        <div class="first first__landing" id="first">
+            <div class="first__text_landing container-fluid">
+                <h1 class="first__header_1">сервис оценки 360</h1>
+                <p>мы поможем Вам не попасть в просак!</p>
+                <a class="btn btn-outline-dark" href="/about" role="button">На главную</a>
+            </div>
+        </div>
+        <div class="content container text-center">
+            <a name="humans"></a>
+            <h1>Команда разработки</h1>
+            <div class="d-flex justify-content-around container comand text-center">
+                <img src="/static/img/me.jpg" class="img-fluid me" alt="Фотография разработчика">
+                <div class="card w-75  border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Дмитриев Андрей</h5>
+                        <p class="card-text">поставьте троечку</p>
+                        <a href="https://github.com/agd01991/projekt" class="btn btn-dark">Github</a>
+                        <a href="https://vk.com/mrray117" class="btn btn-dark">VK</a>
+                    </div>
+                </div>
+            </div>
+            <a name="tech"></a>
+            <h1>Используемые технологии</h1>
+            <div class="d-flex flex-wrap justify-content-around container tech">
+                <img src="/static/img/html.png" alt="Логотип HTML5">
+                <img src="/static/img/css.png" alt="Логотип CSS3">
+                <img src="/static/img/js.png" alt="Логотип JS">
+                <img src="/static/img/git.png" alt="Логотип Git">
+                <img src="/static/img/php.png" alt="Логотип PHP">
+                <img src="/static/img/Mysql.png" alt="Логотип MySQL">
+                <img src="/static/img/bootstrap.png" alt="Логотип bootstrap">
+                <img src="/static/img/jquery.png" alt="Логотип jQuery">
+            </div>
+        </div>
+    {% endblock %}

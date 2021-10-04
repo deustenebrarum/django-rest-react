@@ -24,6 +24,7 @@ class Expense(models.Model):
 class Message(models.Model):
     text = models.TextField(blank=False)
     stamp = models.DateTimeField(auto_now_add=True, null=False)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, null=False, related_name="chat_owner")
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
 
 class Clients(models.Model):

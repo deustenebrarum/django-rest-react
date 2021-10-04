@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="container">
+    <h1>Работники</h1>
+    <div class='col-4'>
+        {% for employee in employees %}
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{employee.name}}</h4>
+                    <p class="card-text">
+                        <h5>Должность: </h5> {{employee.role}}
+                        <h5>Зарплата: </h5> {{employee.salary_per_hour}}$ в час
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

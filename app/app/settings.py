@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'import_export',
     'corsheaders',
+    'service',
     'api',
     'frontend'
 ]
@@ -129,6 +130,7 @@ STATIC_ROOT = (BASE_DIR / 'static')
 
 STATICFILES_DIRS = (
     (BASE_DIR / 'spa/build/static'),
+    (BASE_DIR / 'frontend/static')
 )
 
 LOGIN_REDIRECT_URL = '/'

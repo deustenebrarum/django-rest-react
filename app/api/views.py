@@ -5,14 +5,11 @@ import api.serializers as serializers
 import api.models as models
 from django.contrib.auth.models import User
 
-# class ResortViewSet(viewsets.ModelViewSet):
-#     queryset = models.Resort.objects.all()
-#     serializer_class = serializers.ResortSerializer
-#     permission_classes = [permissions.DjangoModelPermissionsOrAnonReadOnly]
 class UserViewSet(viewsets.ModelViewSet):
     queryset = models.User.objects.all()
     serializer_class = serializers.UserSerializer
     permission_classes = [permissions.IsAuthenticated]
+    http_method_names = ['get']
 
 class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = models.Employee.objects.all()
